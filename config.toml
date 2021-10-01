@@ -1,0 +1,18 @@
+
+baseURL = "https://dzakki.github.io/awesome-gists"
+
+title = "Awesome Gists"
+author = "Dzakki"
+copyright = "Copyright © 2021, Dzakki."
+languageCode = "en-US"
+
+enableRobotsTXT = true
+
+disableKinds = ["taxonomy"]
+ignoreErrors = ["error-disable-taxonomy"]
+[permalinks]
+  tags = "/tags/:slug"
+
+[params]
+
+  description = "collection of usefull gists"

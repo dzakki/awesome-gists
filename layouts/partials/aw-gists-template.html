@@ -1,0 +1,38 @@
+<content>
+  {{ if .Data.Singular }}
+  <h3 style="margin-bottom:0">Filtering for "{{ .Title }}"</h3>
+  <small>
+    <a href="{{ "/" }}">Remove filter</a>
+  </small>
+  {{ end }}
+
+  <p>
+    <div>
+      <span>Tags:</span>
+      {{ range .Site.Taxonomies.tags }}
+        <a href="{{ .Page.Permalink }}">#{{ .Page.Title }}</a>&nbsp;
+      {{ end }}
+    </div>
+  </p>
+  <div class="blog-posts">
+    {{  range where .Site.RegularPages "Type" "aw-gists" }}
+    <div>
+      <h2> {{  .Title }} </h2>
+      <p> {{ .Params.description  }} </p>
+      <script src="{{trim .Params.linkGists " "}}.js "></script>
+      <a href="{{trim .Params.linkGists " "}}" target="_blank" rel="noopener noreferrer">Visit gists</a>
+      <p>
+        {{ range (.GetTerms "tags") }}
+        <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+        {{ end }}
+      </p>
+      <hr>
+    </div>
+    {{ else }}
+    <div>
+      No posts yet
+    </div>
+    {{ end }}
+  </div>
+  
+</content>

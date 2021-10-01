@@ -1,0 +1,28 @@
+{
+  "name": "awesome-gists",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Collection useful gists",
+  "main": "index.js",
+  "devDependencies": {
+    "js-beautify": "^1.14.0"
+  },
+  "scripts": {
+    "test": "npm run beautify",
+    "beautify": "js-beautify layouts/**/*.html -r"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzakki/awesome-gists.git"
+  },
+  "author": {
+    "name": "Dzakki",
+    "email": "Dzakkiaz7@gmail.com",
+    "url": "https://dzakki.github.io/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dzakki/awesome-gists/issues"
+  },
+  "homepage": "https://github.com/dzakki/awesome-gists/#readme"
+}
